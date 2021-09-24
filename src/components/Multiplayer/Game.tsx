@@ -50,15 +50,18 @@ function Game() {
         //@ts-ignore
         error: error => console.warn(error)
     });
-    return () => {
-      createSubscription.unsubscribe();
-    }
 
     // Implement dis
     const updateSubscription: any = null;
 
     // Implement dis
     const deleteSubscription: any = null;
+
+    return () => {
+      createSubscription.unsubscribe();
+    }
+
+    
 
   }, []);
 
