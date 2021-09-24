@@ -1,0 +1,15 @@
+{
+  "amplifydev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-quizzardamplifyapi-amplifydev-163809-authRole",
+      "UnauthRoleArn": "arn:aws:iam::091640162887:role/amplify-quizzardamplifyapi-amplifydev-163809-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::091640162887:role/amplify-quizzardamplifyapi-amplifydev-163809-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-quizzardamplifyapi-amplifydev-163809-deployment",
+      "UnauthRoleName": "amplify-quizzardamplifyapi-amplifydev-163809-unauthRole",
+      "StackName": "amplify-quizzardamplifyapi-amplifydev-163809",
+      "StackId": "arn:aws:cloudformation:us-east-1:091640162887:stack/amplify-quizzardamplifyapi-amplifydev-163809/56a2db30-1d77-11ec-9c3a-0e6b8695f17f",
+      "AmplifyAppId": "d39guqpe1pf3pr"
+    }
+  }
+}

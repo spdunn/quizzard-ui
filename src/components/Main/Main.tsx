@@ -19,7 +19,7 @@ const Main = () => {
         { !auth.showLogin ? <Register /> : <Login /> }
       </aside>
 
-      <Link to="multiplayer">Go To Multiplayer</Link>
+      <Link to="/multiplayer">Go To Multiplayer</Link>
     </Row>
   );
 };
