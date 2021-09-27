@@ -31,3 +31,31 @@ export const listGames = /* GraphQL */ `
     }
   }
 `;
+export const gameByName = /* GraphQL */ `
+  query GameByName(
+    $name: String
+    $description: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelGameFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    gameByName(
+      name: $name
+      description: $description
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        name
+        description
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

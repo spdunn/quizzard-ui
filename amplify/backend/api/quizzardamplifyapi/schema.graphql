@@ -1,5 +1,11 @@
-type Game @model {
+type Game @model
+  @key(name: "gbn", fields: ["name", "description"], queryField: "gameByName") {
   id: ID!
   name: String!
   description: String
+}
+
+type Subscription {
+  onUpdateGameById(id: ID!): Game
+    @aws_subscribe(mutations: ["updateGame"])
 }

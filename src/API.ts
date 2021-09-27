@@ -106,6 +106,22 @@ export type ModelGameConnection = {
   nextToken?: string | null,
 };
 
+export type ModelStringKeyConditionInput = {
+  eq?: string | null,
+  le?: string | null,
+  lt?: string | null,
+  ge?: string | null,
+  gt?: string | null,
+  between?: Array< string | null > | null,
+  beginsWith?: string | null,
+};
+
+export enum ModelSortDirection {
+  ASC = "ASC",
+  DESC = "DESC",
+}
+
+
 export type CreateGameMutationVariables = {
   input: CreateGameInput,
   condition?: ModelGameConditionInput | null,
@@ -187,6 +203,45 @@ export type ListGamesQuery = {
       updatedAt: string,
     } | null > | null,
     nextToken?: string | null,
+  } | null,
+};
+
+export type GameByNameQueryVariables = {
+  name?: string | null,
+  description?: ModelStringKeyConditionInput | null,
+  sortDirection?: ModelSortDirection | null,
+  filter?: ModelGameFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type GameByNameQuery = {
+  gameByName?:  {
+    __typename: "ModelGameConnection",
+    items?:  Array< {
+      __typename: "Game",
+      id: string,
+      name: string,
+      description?: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null > | null,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type OnUpdateGameByIdSubscriptionVariables = {
+  id: string,
+};
+
+export type OnUpdateGameByIdSubscription = {
+  onUpdateGameById?:  {
+    __typename: "Game",
+    id: string,
+    name: string,
+    description?: string | null,
+    createdAt: string,
+    updatedAt: string,
   } | null,
 };
 
